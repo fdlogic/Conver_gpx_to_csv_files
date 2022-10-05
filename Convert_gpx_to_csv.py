@@ -2,21 +2,6 @@ from gpx_converter import Converter
 import os
 import argparse
 
-def convert_gpx_to_dictionary(gpx_file):
-    """
-    This function convert the gpx data to a fictionary.
-
-    Arguments:
-    gpx_file: file with gpx data.
-
-    Return:
-    position_data: dictionary with data about latitude, longitude and altitude
-    """
-
-    position_data = Converter(input_file=gpx_file).gpx_to_dictionary()
-
-    return position_data
-
 
 def convert_gpx_to_csv(gpx_file, csv_file):
     """
