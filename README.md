@@ -5,7 +5,7 @@ Simple python scripts that let you convert a gpx file to a csv file
 For this example, use the next requirements: 
 
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Usage
