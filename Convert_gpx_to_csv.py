@@ -19,25 +19,27 @@ def convert_gpx_to_csv(gpx_file, csv_file):
 
     return pass_result
 
+
 def get_comline_parser():
-    parser = argparse.ArgumentParser(description='Search files')
-    parser.add_argument("--path", type=str, default = '.', help = "Path where found the files")
+    parser = argparse.ArgumentParser(description="Search files")
+    parser.add_argument(
+        "--path", type=str, default=".", help="Path where found the files"
+    )
 
     return parser
 
 
-if __name__== "__main__":
-
+if __name__ == "__main__":
     args = get_comline_parser().parse_args()
 
     for file_ in os.listdir(args.path):
         name, extension = os.path.splitext(file_)
-        
+
         if extension in [".gpx"]:
             gpx_file = name + extension
             csv_file = name + ".csv"
             print("I found the file {}".format(gpx_file))
 
             pass_result = convert_gpx_to_csv(gpx_file, csv_file)
-            if(pass_result):
+            if pass_result:
                 print("file {} converted to .csv".format(gpx_file))
