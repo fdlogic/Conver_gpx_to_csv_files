@@ -1,6 +1,7 @@
-from gpx_converter import Converter
-import os
 import argparse
+import os
+
+from gpx_converter import Converter
 
 
 def convert_gpx_to_csv(gpx_file, csv_file):

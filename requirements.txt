@@ -1,3 +1,6 @@
 argparse
 gpx-converter
 black
+isort	
+interrogate
+pdoc3
